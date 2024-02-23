@@ -8,3 +8,9 @@
     padding-bottom: 2px; 
     font-size: large;
 }
+
+  .white-box {
+    background-color: white;
+    padding: 10px;
+    border: 1px solid black;
+  }
