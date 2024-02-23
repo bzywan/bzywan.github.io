@@ -11,7 +11,12 @@
 
   .white-box {
     background-color: white;
-    padding: 10px;
-    border: 1px solid black;
+     margin-left: 5%;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 2px; 
+    font-size: large;
   }
 
