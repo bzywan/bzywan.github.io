@@ -8,14 +8,17 @@
         var i = 5;
 
         function updateCount() {
-            i = i - 1;
-            countobj = document.getElementById("count");
-            console.log("Updating object: " + countobj);
-            countobj.innerHTML = "<b>" + i + "</b>";
-            
-            let redness = Math.round(255 * (1 - i / initialCount)); // Adjust the value range based on your initial count
+    i = i - 1;
+    countobj = document.getElementById("count");
+    console.log("Updating object: " + countobj);
+    countobj.innerHTML = "<b>" + i + "</b>";
 
-            document.body.style.backgroundColor = `rgb(${redness}, 0, 0)`;
+    // Calculate redness based on the count
+    let redness = Math.round(255 * (1 - i / initialCount)); // Adjust the value range based on your initial count
+    redness = Math.min(255, Math.max(0, redness)); // Ensure redness is within valid range (0-255)
+
+    // Set the background color with increased red component
+    document.body.style.backgroundColor = `rgb(${redness}, 0, 0)`;
 
             if (i <= 0) {
                 countobj.innerHTML = "<b><font size='+5' color='yellow'>GOLD STAR PLEASE!</b>";
