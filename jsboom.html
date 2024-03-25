@@ -13,6 +13,10 @@
             console.log("Updating object: " + countobj);
             countobj.innerHTML = "<b>" + i + "</b>";
             
+            let redness = Math.round(255 * (1 - i / initialCount)); // Adjust the value range based on your initial count
+
+            document.body.style.backgroundColor = `rgb(${redness}, 0, 0)`;
+
             if (i <= 0) {
                 countobj.innerHTML = "<b><font size='+5' color='yellow'>GOLD STAR PLEASE!</b>";
         }
