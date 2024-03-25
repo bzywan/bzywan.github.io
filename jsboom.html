@@ -21,17 +21,17 @@
 
     </script>
     <script>
-        function redder() [
+        function redder(){
             // Calculate redness based on the count
             let redness = Math.round(255 * (1 - i / initialCount));
             redness = Math.min(255, Math.max(0, redness));
 
             // Set the background color with increased red component
             document.body.style.backgroundColor = `rgb(${redness}, 0, 0)`;
-        if (i <= 0) [
+        if (i <= 0) {
             document.body.style.backgroundColor = "rgb(255, 0, 0)";
-        ]
-        ]
+        }
+        } 
     </script>
         <h2>Count Down: <span id="count"><script>document.write(i)</script></span></h2>
         <button onclick="updateCount();redder()">Next</button>
