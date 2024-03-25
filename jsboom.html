@@ -12,7 +12,11 @@
             countobj = document.getElementById("count");
             console.log("Updating object: " + countobj);
             countobj.innerHTML = "<b>" + i + "</b>";
-            document.body.style.backgroundColor = 'red'+1;
+            redness += 50;
+            if (redness > 250) redness = 250;
+      
+      
+            document.body.style.backgroundColor = `rgb(${redness}, 0, 0)`;
         
         if (i <= 0) {
                 countobj.innerHTML = "<b><font size='+5' color='yellow'>GOLD STAR PLEASE!</b>";
