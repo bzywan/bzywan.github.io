@@ -1,6 +1,35 @@
 <html>
   <center>
-  <a href="/Screenshot 2024-01-28 at 7.46.11 PM.png"><img width="80%" src="/Screenshot 2024-01-28 at 7.46.11 PM.png"></a>
+  <a href="/Screenshot 2024-01-28 at 7.46.11 PM.png"><img width="80%" src="https://www.law.virginia.edu/system/files/admissions/lawschool-aerial.jpg"></a>
+</center>
+<center>
+<h1>Photo Carousel!</h1>
+
+<button onclick="prevImage()">Previous Image</button>
+<br>
+<img id="cimage" height="600" src="" alt="Image Changes">
+<br>
+<button onclick="nextImage()">Next Image</button>
+<script>
+    var images = [
+        'https://t4.ftcdn.net/jpg/00/99/53/31/360_F_99533164_fpE2O6vEjnXgYhonMyYBGtGUFCLqfTWA.jpg',
+        'https://www.shutterstock.com/image-photo/fire-alphabet-number-2-260nw-92686588.jpg',
+        'https://charatoon.com/photo/thum/6759.png'
+    ];
+
+    var currentIndex = 0;
+    var carouselImage = document.getElementById("cimage");
+
+    function nextImage() {
+        carouselImage.src = images[currentIndex];
+        currentIndex = (currentIndex + 1) % images.length;
+    }
+    function prevImage() {
+        carouselImage.src = images[currentIndex];
+        currentIndex = (currentIndex - 1+ images.length) % images.length;
+    }
+    nextImage();
+</script>
 </center>
   <p align="center">
     <a href="index.html">Return to Index</a>
