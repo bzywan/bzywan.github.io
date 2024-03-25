@@ -25,20 +25,23 @@
     }
 
     </script>
-    <script>
-        function redder(){
-            // Calculate redness based on the count
-            let redness = Math.round(255 * (1 - i / initialCount));
-            redness = Math.min(255, Math.max(0, redness));
 
-            // Set the background color with increased red component
-            document.body.style.backgroundColor = `rgb(${redness}, 0, 0)`;
-        if (i <= 0) {
-            document.body.style.backgroundColor = "rgb(255, 0, 0)";
-        }
-        } 
-    </script>
         <h2>Count Down: <span id="count"><script>document.write(i)</script></span></h2>
         <button onclick="updateCount();redder()">Next</button>
+        
+        <h1>YouTube Video Player</h1>
+        <button onclick="playVideo()">Play Video</button>
+        <br>
+        <iframe id="player" width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+    
+        <script>
+            function playVideo() {
+                // Replace VIDEO_ID with the ID of the YouTube video you want to play
+                var videoId = "WIRK_pGdIdA";
+                var iframe = document.getElementById('player');
+                iframe.src = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1';
+            }
+        </script>
+    
 </body>
 </html>
