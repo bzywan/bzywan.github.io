@@ -2,11 +2,10 @@
 <body>
     <h1>Exploring the DOM</h1>
 
-    <h2>Count Down: <span id="count">20</span></h2>
-    <button onclick="updateCount()">Next</button>
+
 
     <script>
-        var i = 20;
+        var i = 5;
 
         function updateCount() {
             i = i - 1;
@@ -16,9 +15,14 @@
         
         if (i <= 0) {
                 countobj.innerHTML = "<b><font size='+5' color='yellow'>GOLD STAR PLEASE!</b>";
+                    function changeColor(color) {
+            document.body.style.backgroundColor = color;
+        }
         }
     }
 
     </script>
+        <h2>Count Down: <span id="count"><script>document.write(i)</script></span></h2>
+        <button onclick="updateCount()">Next</button>
 </body>
 </html>
