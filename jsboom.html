@@ -5,29 +5,31 @@
 
 
     <script>
-        var i = 5;
+        var count = 5;
         var redness = 0;
-        function updateCount() {
-            i = i - 1;
+        function displayCount(counter) {
             countobj = document.getElementById("count");
-            console.log("Updating object: " + countobj);
-            countobj.innerHTML = "<b>" + i + "</b>";
+            countobj.innerHTML = "<i>" + counter.toString() + "</i>";
+        }
+
+        function updateCount() {
+            count = count - 1;
+
+            displayCount(count);
+
             redness += 50;      
             redness = Math.min(redness, 255);
             document.body.style.backgroundColor = `rgb(255, ${255 - redness}, ${255 - redness})`
-        
-        if (i <= 0) {
+
+        if (count <= 0) {
                 countobj.innerHTML = "<b><font size='+5' color='yellow'>GOLD STAR PLEASE!</b>";
         }
-        
-
-
     }
-
     </script>
-
-        <h2>Count Down: <span id="count"><script>document.write(i)</script></span></h2>
-        <button onclick="updateCount();redder()">Next</button>
+        
+        <h2>Count Down: <span id="count"></span></h2>
+        <button onclick="updateCount()">Next</button>
+        <script>displayCount(count)</script>
         
         <h1>YouTube Video Player</h1>
         <button onclick="playVideo()">Play Super Surprise Video!!!</button>
