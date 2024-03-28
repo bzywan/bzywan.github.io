@@ -18,17 +18,23 @@
     ];
 
     var currentIndex = 0;
-    var carouselImage = document.getElementById("cimage");
+    
 
     function nextImage() {
-        carouselImage.src = images[currentIndex];
         currentIndex = (currentIndex + 1) % images.length;
+        displayImage();
+        
     }
     function prevImage() {
-        carouselImage.src = images[currentIndex];
-        currentIndex = (currentIndex - 1+ images.length) % images.length;
+      currentIndex = (currentIndex - 1+ images.length) % images.length; 
+      displayImage();
+        
     }
-    nextImage();
+    function displayImage(){
+      var carouselImage = document.getElementById("cimage");
+      carouselImage.src = images[currentIndex];
+    }
+    displayImage();
 </script>
 </center>
   <p align="center">

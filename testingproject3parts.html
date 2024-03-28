@@ -1,0 +1,27 @@
+<html>
+<body>
+    <h1>Exploring the DOM</h1>
+    <script>
+        var count = 5;
+        var redness = 0;
+        function displayCount(counter) {
+            countobj = document.getElementById("count");
+            countobj.innerHTML = "<i>" + counter.toString() + "</i>";
+        }
+        function updateCount() {
+            count = count - 1;
+            displayCount(count);
+            redness += 50;      
+            redness = Math.min(redness, 255);
+            document.body.style.backgroundColor = `rgb(255, ${255 - redness}, ${255 - redness})`
+
+        if (count <= 0) {
+                countobj.innerHTML = "<b><font size='+5' color='yellow'>GOLD STAR PLEASE!</b>";
+        }
+    }
+    </script>      
+        <h2>Count Down: <span id="count"></span></h2>
+        <button onclick="updateCount()">Next</button>
+        <script>displayCount(count)</script>    
+</body>
+</html>
